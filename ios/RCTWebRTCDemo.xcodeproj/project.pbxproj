@@ -919,6 +919,7 @@
 					"-ObjC",
 					"-lc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.csq.RCTWebRTCDemo;
 				PRODUCT_NAME = RCTWebRTCDemo;
 			};
 			name = Debug;
@@ -945,6 +946,7 @@
 					"-ObjC",
 					"-lc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.csq.RCTWebRTCDemo;
 				PRODUCT_NAME = RCTWebRTCDemo;
 			};
 			name = Release;
