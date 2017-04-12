@@ -6,6 +6,7 @@ Part One: Run RTCWEBDEMO from Xcode
 
 - 1. Version Preparation:
     - Node: v7.8.0
+    - npm: v4.2.0
     - react-native-cli: 2.0.1
     - react-native: 0.40.0
     - Dependencies in Package.json:
@@ -96,14 +97,28 @@ Part Two: Distribution
         - in Xcode, click Images.xcassets in project navigator and drag dif size pics to apply
     - Registering App ID in developer.apple.com  (if distribute to app store, upload the app to iTunes.apple.com; if not, not needed)
         - Refer to this tutorial: https://www.youtube.com/watch?v=tnbOcpwJGa8&t=666s
-
         - use the same Bundle Identifier in Provisioning Profile -> Distribution -> Explicit App ID
+    - Register testing device UDID in developer.apple.com
+        - connect testing device to itunes
+        - select Summary -> click on Serial Number to see UDID
+        - login developer.apple.com and register UDID in Apple Developer Portal (add new device UDID under Devices -> All in developer.apple.com)
     - Archive:
         - Select Generic IOS Device
         - clean and build the project
         - Product -> Archive -> Export ipa files to your computer
             - Refer to App Distribution Guide: https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW46
+            - choose "Save for Development Deployment" and generate the ipa file to your computer
+    - Install app through itunes
+        - double click ipa file and open it in itunes
+        - connect testing device to itunes
+        - find the app in left app list and click install, click apply and done
+        - the app will be installed on testing device.
     - Install app on your device using Xcode
         - window->devices->select your device -> Installed Apps -> click add button to select the ipa file from your computer
+    Aha! You can check the installed app through your device.
 
-    - You can check the installed app through your device.
+
+///////////////////////////////////////
+Note: 
+Xcode version: Version 8.2.1 (8C1002)
+Archived ipa from this Xcode version can't support ios above 10.2.0
