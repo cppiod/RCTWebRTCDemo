@@ -115,6 +115,9 @@ Part Two: Distribution
         - the app will be installed on testing device.
     - Install app on your device using Xcode
         - window->devices->select your device -> Installed Apps -> click add button to select the ipa file from your computer
+        
+    注意：打包方式选择Save for Development Deployment；先在developer.apple.com添加udid，再archive打包成ipa，然后通过itunes安装。
+
     Aha! You can check the installed app through your device.
 
 
