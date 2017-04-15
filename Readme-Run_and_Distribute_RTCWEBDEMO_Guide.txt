@@ -2,6 +2,15 @@ Running and Distribute RTCWEBDEMO Guide
 Author: CPP
 Date: 2017-04-11 11:53pm
 
+Part Zero: CREATE PRJECT by npm
+- 1. npm init [project name]
+- 2. create package.json file
+    - install dependencies: npm install
+    - install react-native-webrtc: npm install react-native-webrtc
+    - coding using sublime, create .js, .html files and so on.
+- 3. make ios bundle: react-native bundle --platform ios --dev false --entry-file index.ios.js --bundle-output iOS/main.jsbundle
+
+
 Part One: Run RTCWEBDEMO from Xcode
 
 - 1. Version Preparation:
@@ -120,6 +129,17 @@ Part Two: Distribution
 
     Aha! You can check the installed app through your device.
 
+Part Three: Problems:
+
+- Unable to resolve module react-native-webrtc from /Users/cpp/devworkspace/ReactNative/RCTWebRTCDemo/main.js: Module does not exist in the module map or in these directories: /Users/cpp/devworkspace/ReactNative/RCTWebRTCDemo/node_modules,   /Users/cpp/node_modules
+
+This might be related to https://github.com/facebook/react-native/issues/4968
+To resolve try the following:
+  1. Clear watchman watches: `watchman watch-del-all`.
+  2. Delete the `node_modules` folder: `rm -rf node_modules && npm install`.
+  3. Reset packager cache: `rm -fr $TMPDIR/react-*` or `npm start -- --reset-cache`.
+
+  - 试过clean process很多遍之后还是有这个错误，又试了rm -rf node_modules && npm install，之后rm -fr $TMPDIR/react-*，之后成功
 
 ///////////////////////////////////////
 Note: 

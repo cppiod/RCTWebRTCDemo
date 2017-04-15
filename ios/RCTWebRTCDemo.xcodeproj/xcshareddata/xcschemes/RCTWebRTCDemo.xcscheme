@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0620"
+   LastUpgradeVersion = "0830"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "NO"
@@ -18,6 +18,20 @@
                BuildableName = "libReact.a"
                BlueprintName = "React"
                ReferencedContainer = "container:../node_modules/react-native/React/React.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "35A2221E1CB493700015FD5C"
+               BuildableName = "libRCTWebRTC.a"
+               BlueprintName = "RCTWebRTC"
+               ReferencedContainer = "container:../../react-native-webrtc/ios/RCTWebRTC.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry

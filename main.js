@@ -13,7 +13,8 @@ import {
 
 import io from 'socket.io-client';
 
-const socket = io.connect('https://react-native-webrtc.herokuapp.com', {transports: ['websocket']});
+//const socket = io.connect('https://react-native-webrtc.herokuapp.com', {transports: ['websocket']});
+const socket = io.connect('https://www.tkiicpp.com', {transports: ['websocket']});
 
 import {
   RTCPeerConnection,
@@ -210,7 +211,8 @@ socket.on('connect', function(data) {
 });
 
 function logError(error) {
-  console.log("logError", error);
+  console.log("logError:");
+  console.log(error);
 }
 
 function mapHash(hash, func) {
